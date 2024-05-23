@@ -1,0 +1,33 @@
+<ScreenManagement>:
+    MenuScreen:
+    OtherScreen:
+
+<MenuScreen>:
+    name: 'menu'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Menu Screen'
+            font_size: '20sp'
+            size_hint_y: 0.8
+        Button:
+            text: 'Go to Other Screen'
+            size_hint_y: 0.2
+            on_press: root.current = 'other'
+            background_normal: ''
+            background_color: 0, 0.7, 0.3, 1  
+
+<OtherScreen>:
+    name: 'other'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Other Screen'
+            font_size: '20sp'
+            size_hint_y: 0.8
+        Button:
+            text: 'Go to Menu Screen'
+            size_hint_y: 0.2
+            on_press: root.current = 'menu'
+            background_normal: ''
+            background_color: 0.7, 0.3, 0, 1  
