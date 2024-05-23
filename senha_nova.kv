@@ -1,0 +1,36 @@
+<BoxLayout>:
+        orientation: 'vertical'
+    padding: 10
+    
+    Widget:
+        canvas:
+            Color:
+                rgba: 0, 0, 0.2, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    
+    TextInput:
+        id: username_input
+        hint_text: 'Nome'
+        multiline: False
+    
+    TextInput:
+        id: new_password_input
+        hint_text: 'Nova Senha'
+        multiline: False
+        password: True
+    
+    TextInput:
+        id: confirm_password_input
+        hint_text: 'Confirme Senha'
+        multiline: False
+        password: True
+    
+    Button:
+        text: 'Confirme Senha'
+        on_press: app.confirm_password(root)
+    
+    Label:
+        id: message_label
+        text: ''
