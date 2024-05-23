@@ -1,0 +1,133 @@
+<TelaLogin>:
+    FloatLayout:
+        Widget:
+            canvas:
+                Color:
+                    rgba: 0, 0, 0.2, 1
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Image:
+            source: ('C:/Users/aluno.sesipaulista/Desktop/LoginScreen.kv/assets/logo.png')
+            size_hint: (.85,.85)
+            pos_hint: {'center_x': .5, 'center_y': .82}
+            
+        Label:
+            text: 'Nome:'
+            pos_hint: {'x': 0.05, 'top': 0.8}
+            size_hint: 0.3, 0.05
+
+        TextInput:
+            id: nome_input
+            multiline: False
+            pos_hint: {'x': 0.35, 'top': 0.8}
+            size_hint: 0.6, 0.05
+
+        Label:
+            text: 'Email:'
+            pos_hint: {'x': 0.05, 'top': 0.7}
+            size_hint: 0.3, 0.05
+
+        TextInput:
+            id: email_input
+            multiline: False
+            pos_hint: {'x': 0.35, 'top': 0.7}
+            size_hint: 0.6, 0.05
+
+        Label:
+            text: 'Senha:'
+            pos_hint: {'x': 0.05, 'top': 0.6}
+            size_hint: 0.3, 0.05
+
+        TextInput:
+            id: senha_input
+            multiline: False
+            password: True
+            pos_hint: {'x': 0.35, 'top': 0.6}
+            size_hint: 0.6, 0.05
+
+        Button:
+            text: 'Entrar'
+            pos_hint: {'x': 0.05, 'top': 0.5}
+            size_hint: 0.9, 0.05
+
+        Label:
+            text: 'Esqueci a senha'
+            pos_hint: {'x': 0.05, 'top': 0.45}
+            size_hint: 0.9, 0.05
+
+        Button:
+            text: 'Recuperar senha'
+            pos_hint: {'x': 0.05, 'top': 0.4}
+            size_hint: 0.9, 0.05
+
+        Label:
+            text: 'Não tem uma conta? Cadastre-se abaixo:'
+            pos_hint: {'x': 0.05, 'top': 0.35}
+            size_hint: 0.9, 0.05
+        Button:
+            text: 'Cadastrar-se'
+            pos_hint: {'center_x': 0.5, 'center_y': .25}
+            size_hint: 0.9, 0.05
+            on_press: on_press: root.cadastro()
+
+<TelaCadastro>:
+    FloatLayout:
+        Widget:
+            canvas:
+                Color:
+                    rgba: 0, 0, 0.2, 1
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # LOGO 
+        Image:
+            source: ('C:/Users/aluno.sesipaulista/Desktop/LoginScreen.kv/assets/logo.png')
+            size_hint: (.85,.85)
+            pos_hint: {'center_x': .15, 'center_y': .82}
+
+        Label:
+            text: 'Novo Nome:'
+            pos_hint: {'x': 0.05, 'center_y': 0.7}
+            size_hint: 0.3, 0.05
+
+        TextInput:
+            id: novo_nome_input
+            multiline: False
+            pos_hint: {'x': 0.35, 'center_y': 0.7}
+            size_hint: 0.6, 0.05
+
+        Label:
+            text: 'Novo Email:'
+            pos_hint: {'x': 0.05, 'center_y': 0.6}
+            size_hint: 0.3, 0.05
+
+        TextInput:
+            id: novo_email_input
+            multiline: False
+            pos_hint: {'x': 0.35, 'center_y': 0.6}
+            size_hint: 0.6, 0.05
+
+        Label:
+            text: 'Nova Senha:'
+            pos_hint: {'x': 0.05, 'center_y': 0.5}
+            size_hint: 0.3, 0.05
+
+        TextInput:
+            id: nova_senha_input
+            multiline: False
+            password: True
+            pos_hint: {'x': 0.35, 'center_y': 0.5}
+            size_hint: 0.6, 0.05
+
+        Button:
+            text: 'Criar Conta'
+            pos_hint: {'center_x': 0.5, 'center_y': .25}
+            size_hint: 0.9, 0.05
+
+        Button:
+            text: 'Voltar pro login'
+            pos_hint: {'center_x': 0.5, 'center_y': .2}
+            size_hint: 0.9, 0.05
+            on_press: root.login()
